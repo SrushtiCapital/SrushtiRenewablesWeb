@@ -1,0 +1,480 @@
+/* Global keyframes — CSS Modules must use :global or names won't resolve */
+@keyframes capitalStackFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes capitalStackFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes capitalStackDotPop {
+  0% {
+    transform: translate(-50%, 50%) scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: translate(-50%, 50%) scale(1.45);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes capitalStackDrawPath {
+  from {
+    stroke-dashoffset: 300;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes capitalStackDashDrop {
+  from {
+    stroke-dashoffset: 80;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes capitalStackCirclePop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes capitalStackMarch {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -36;
+  }
+}
+
+@keyframes capitalStackDotPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px #fff;
+    transform: translate(-50%, 50%) scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 4px #fff, 0 0 12px rgba(6, 78, 59, 0.45);
+    transform: translate(-50%, 50%) scale(1.12);
+  }
+}
+
+@keyframes capitalStackDotPulseGold {
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px #fdf8ea;
+    transform: translate(-50%, 50%) scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 4px #fdf8ea, 0 0 12px rgba(138, 106, 38, 0.4);
+    transform: translate(-50%, 50%) scale(1.12);
+  }
+}
+
+.card {
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 2rem 3rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Hidden until scrolled into view — then .play triggers the sequence */
+.csTitle,
+.nodeTeal,
+.nodeGold,
+.dotTeal,
+.dotGold,
+.forkTrack,
+.forkTrackGold,
+.forkLeft,
+.forkRight,
+.forkFlowTeal,
+.forkFlowGold,
+.flowParticles,
+.nodeHoldco,
+.dashedTrack,
+.dashedCircle,
+.dashedSeg,
+.dashedFlow,
+.particleGray,
+.nodeSpv {
+  opacity: 0;
+}
+
+.play .csTitle {
+  animation: capitalStackFadeDown 0.5s ease 0.1s forwards;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.node {
+  position: relative;
+  padding: 16px 18px 20px;
+  border-radius: 14px;
+  text-align: center;
+  cursor: default;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.node:hover {
+  transform: translateY(-3px);
+}
+
+.nodeLabel {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.nodeValue {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nodeTeal {
+  border: 2px solid #064e3b;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(6, 78, 59, 0.08);
+}
+
+.play .nodeTeal {
+  animation: capitalStackFadeDown 0.5s ease 0.2s forwards;
+}
+
+.nodeTeal .nodeLabel {
+  color: #6b7280;
+}
+
+.nodeTeal .nodeValue {
+  color: #064e3b;
+}
+
+.dotTeal {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #064e3b;
+  box-shadow: 0 0 0 3px #fff;
+  transform: translate(-50%, 50%) scale(0);
+}
+
+.play .dotTeal {
+  animation:
+    capitalStackDotPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.75s forwards,
+    capitalStackDotPulse 2.4s ease-in-out 1.5s infinite;
+}
+
+.nodeGold {
+  border: 1.5px solid rgba(111, 92, 44, 0.4);
+  background: rgba(253, 246, 228, 0.65);
+  box-shadow: 0 2px 8px rgba(111, 92, 44, 0.08);
+}
+
+.play .nodeGold {
+  animation: capitalStackFadeDown 0.5s ease 0.28s forwards;
+}
+
+.nodeGold .nodeLabel {
+  color: #92722a;
+}
+
+.nodeGold .nodeValue {
+  color: #7c5c1e;
+}
+
+.dotGold {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #8a6a26;
+  box-shadow: 0 0 0 3px #fdf8ea;
+  transform: translate(-50%, 50%) scale(0);
+}
+
+.play .dotGold {
+  animation:
+    capitalStackDotPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.82s forwards,
+    capitalStackDotPulseGold 2.4s ease-in-out 1.55s infinite;
+}
+
+.forkSvg {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: 58px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.forkTrack,
+.forkTrackGold {
+  fill: none;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  stroke-opacity: 0.18;
+}
+
+.play .forkTrack {
+  animation: capitalStackDrawPath 0.55s cubic-bezier(0.4, 0, 0.2, 1) 0.85s forwards;
+}
+
+.play .forkTrackGold {
+  animation: capitalStackDrawPath 0.55s cubic-bezier(0.4, 0, 0.2, 1) 0.92s forwards;
+}
+
+.forkLeft,
+.forkRight {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+
+.play .forkLeft {
+  animation: capitalStackDrawPath 0.55s cubic-bezier(0.4, 0, 0.2, 1) 0.9s forwards;
+}
+
+.play .forkRight {
+  animation: capitalStackDrawPath 0.55s cubic-bezier(0.4, 0, 0.2, 1) 0.97s forwards;
+}
+
+.forkFlowTeal,
+.forkFlowGold {
+  stroke-dasharray: 8 12;
+  stroke-dashoffset: 0;
+  fill: none;
+  pointer-events: none;
+}
+
+.play .forkFlowTeal {
+  animation: capitalStackMarch 1.4s linear 1.5s infinite;
+  opacity: 0.75;
+}
+
+.play .forkFlowGold {
+  animation: capitalStackMarch 1.25s linear 1.58s infinite;
+  opacity: 0.8;
+}
+
+.flowParticles {
+  pointer-events: none;
+}
+
+.play .flowParticles {
+  opacity: 1;
+}
+
+.particleTeal,
+.particleTealSoft,
+.particleGold,
+.particleGoldSoft {
+  filter: drop-shadow(0 0 4px rgba(6, 78, 59, 0.35));
+}
+
+.particleGold,
+.particleGoldSoft {
+  filter: drop-shadow(0 0 4px rgba(138, 106, 38, 0.35));
+}
+
+.nodeHoldco {
+  padding: 20px 24px;
+  border-radius: 14px;
+  text-align: center;
+  background: linear-gradient(145deg, #0b5c44 0%, #064e3b 50%, #043b2e 100%);
+  border: 1px solid rgba(6, 78, 59, 0.25);
+  box-shadow: 0 4px 16px rgba(6, 78, 59, 0.25);
+  cursor: default;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.play .nodeHoldco {
+  animation: capitalStackFadeDown 0.55s ease 1.05s forwards;
+}
+
+.nodeHoldco:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(6, 78, 59, 0.32);
+}
+
+.nodeHoldco .nodeLabel {
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.nodeHoldco .nodeValue {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.dashedLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.dashedCircle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid #9ca3af;
+  background: #fff;
+  transform: scale(0);
+}
+
+.play .dashedCircle {
+  animation: capitalStackCirclePop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) 1.45s forwards;
+}
+
+.dashedSvg {
+  display: block;
+  width: 2px;
+  height: 44px;
+  overflow: visible;
+}
+
+.dashedSeg {
+  stroke-dasharray: 5 5;
+  stroke-dashoffset: 80;
+}
+
+.play .dashedSeg {
+  animation: capitalStackDashDrop 0.5s ease 1.55s forwards;
+}
+
+.dashedFlow {
+  stroke-dasharray: 4 10;
+  stroke-dashoffset: 0;
+}
+
+.play .dashedFlow {
+  animation: capitalStackMarch 1.1s linear 1.65s infinite;
+  opacity: 0.7;
+}
+
+.play .particleGray {
+  opacity: 0.85;
+}
+
+.nodeSpv {
+  padding: 18px 20px;
+  border: 2px dashed #8a6a26;
+  background: #fff;
+  text-align: center;
+  box-shadow:
+    0 1px 6px rgba(111, 92, 44, 0.08),
+    inset 0 0 0 1px rgba(111, 92, 44, 0.05);
+}
+
+.play .nodeSpv {
+  animation: capitalStackFadeUp 0.55s ease 1.65s forwards;
+}
+
+.nodeSpv .nodeLabel {
+  color: #6b7280;
+}
+
+.nodeSpv .nodeValue {
+  color: #064e3b;
+}
+
+/* Show final state immediately when user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .csTitle,
+  .nodeTeal,
+  .nodeGold,
+  .dotTeal,
+  .dotGold,
+  .forkTrack,
+  .forkTrackGold,
+  .forkLeft,
+  .forkRight,
+  .forkFlowTeal,
+  .forkFlowGold,
+  .flowParticles,
+  .nodeHoldco,
+  .dashedTrack,
+  .dashedCircle,
+  .dashedSeg,
+  .dashedFlow,
+  .particleGray,
+  .nodeSpv {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+
+  .forkFlowTeal,
+  .forkFlowGold,
+  .flowParticles,
+  .dashedFlow,
+  .particleGray {
+    opacity: 0 !important;
+    display: none;
+  }
+
+  .dotTeal,
+  .dotGold {
+    transform: translate(-50%, 50%) scale(1) !important;
+  }
+
+  .dashedCircle {
+    transform: scale(1) !important;
+  }
+}
