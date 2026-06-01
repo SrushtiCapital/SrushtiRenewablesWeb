@@ -31,11 +31,21 @@ export const CONTACT_OFFICE = {
   heading: "United Kingdom",
   lines: [
     "Srushti Renewables Ltd.",
-    "Registered in England & Wales.",
+    "8, Lanewood Close, Amersham, HP7 9JL, Company Registration No 14760527",
     "Operations across the UK and India corridor.",
   ],
 };
 
+export const CONTACT_INDIA_OFFICE = {
+  heading: "India",
+  lines: [
+    "Naturewist Renewables Private Limited - Subsidiary of Srushti Renewables Ltd, UK",
+    "Thane, Mumbai, CIN U20121MH2023FTC406095",
+    "Corporate Office - Awfis, One International Center, 8th Floor, Tower 1,Senapati Bapat Marg,Dadar West, Prabhadevi,",
+    "Email: kirankumar@srushtirenewables.co.uk",
+    "Phone: +91 91372 58524"
+  ],
+};
 export const ENQUIRY_ROLES = [
   "Sponsor / Promoter",
   "Institutional lender",

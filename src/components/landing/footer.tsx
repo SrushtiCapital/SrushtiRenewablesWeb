@@ -2,14 +2,17 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FadeIn } from "@/components/motion/fade-in";
 import { Button } from "@/components/ui/button";
 import { fadeUp } from "@/lib/motion";
 import Image from "next/image";
+import { CONTACT_OFFICE } from "../contact/contact-data";
   
 const practiceLinks = [
   { label: "Services", href: "/services" },
   { label: "Sectors", href: "/sectors" },
+  { label: "Ecosystem", href: "/ecosystem" },
   { label: "About", href: "/about" },
   { label: "Team", href: "/team" },
   { label: "Contact", href: "/contact" },
@@ -27,6 +30,8 @@ const legalLinks = [
 ];
 
 export function Footer() {
+  const router = useRouter();
+
   return (
     <footer className="border-t border-outline-variant/30 bg-surface-container-lowest">
       <FadeIn as="div" y={24} className="mx-auto grid max-w-container-max grid-cols-1 gap-gutter px-margin-mobile py-section-padding md:grid-cols-4 md:px-gutter">
@@ -39,12 +44,15 @@ export function Footer() {
         >
          <Image src="/logo.png" alt="Srushti Renewables" width={100} height={100} />
           <p className="mb-6 font-body-sm text-body-sm text-on-surface-variant">
-            Srushti Renewables Ltd.
-            <br />
-            Registered in England &amp; Wales.
-            <br />
-            UK — INDIA CORRIDOR
+            {CONTACT_OFFICE.heading}
           </p>
+          <ul className="mt-2 space-y-1">
+          {CONTACT_OFFICE.lines.map((line) => (
+            <li key={line} className="text-sm text-on-surface-variant">
+              {line}
+            </li>
+          ))}
+        </ul>
         </motion.div>
 
         {[
@@ -92,7 +100,11 @@ export function Footer() {
             <br />
             Mumbai, India
           </p>
-          <Button size="sm" className="mt-8 bg-primary text-white">
+          <Button
+            size="sm"
+            className="mt-8 bg-primary text-white"
+            onClick={() => router.push("/contact")}
+          >
             Start a mandate →
           </Button>
         </motion.div>

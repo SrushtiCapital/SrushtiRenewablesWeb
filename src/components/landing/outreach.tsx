@@ -21,24 +21,24 @@ type Counterparty = {
 
 const counterparties: Counterparty[] = [
   {
-    institution: "MUFG",
-    desk: "Project Finance",
+    institution: "Brookfield",
+    desk: "Infrastructure Finance",
     phase: "engaged",
-    focus: "ECB pricing",
+    focus: "Greenfield Equity",
     accent: "emerald",
   },
   {
-    institution: "Federated Hermes",
+    institution: "Kapil Group",
     desk: "Real Assets",
     phase: "engaged",
     focus: "Real estate",
     accent: "emerald",
   },
   {
-    institution: "FMO",
-    desk: "Netherlands DFI",
+    institution: "KfW DEG",
+    desk: "Germany DFI",
     phase: "pipeline",
-    focus: "Green debt",
+    focus: "Greenfield Equity",
     accent: "amber",
   },
   {
@@ -56,10 +56,10 @@ const counterparties: Counterparty[] = [
     accent: "teal",
   },
   {
-    institution: "SBI",
-    desk: "Singapore",
+    institution: "Tata Steel",
+    desk: "India",
     phase: "engaged",
-    focus: "Cross-border",
+    focus: "Greenfield Infrastructure",
     accent: "teal",
   },
   {
@@ -70,7 +70,7 @@ const counterparties: Counterparty[] = [
     accent: "violet",
   },
   {
-    institution: "Turquoise",
+    institution: "UK Export Finance",
     desk: "Finance",
     phase: "engaged",
     focus: "Sustainable",

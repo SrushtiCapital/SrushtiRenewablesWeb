@@ -3,7 +3,7 @@
 import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -26,6 +26,7 @@ function isNavActive(href: string, pathname: string) {
 
 export function Header() {
   const pathname = usePathname();
+  const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { scrollY } = useScroll();
@@ -83,9 +84,13 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-3">
-          <Button size="sm" className="hidden bg-primary text-white sm:inline-flex">
+          <Button
+            size="sm"
+            className="hidden bg-primary text-white sm:inline-flex"
+            onClick={() => router.push("/contact")}
+          >
             Start a mandate
-          <ChevronRightIcon className="h-4 w-4" />
+            <ChevronRightIcon className="h-4 w-4" />
           </Button>
 
           <button
@@ -136,7 +141,11 @@ export function Header() {
                   </motion.div>
                 );
               })}
-              <Button size="sm" className="mt-2 w-full bg-primary text-white" onClick={() => window.location.href = "/contact"}>
+              <Button
+                size="sm"
+                className="mt-2 w-full bg-primary text-white"
+                onClick={() => router.push("/contact")}
+              >
                 Start a mandate
               </Button>
             </div>

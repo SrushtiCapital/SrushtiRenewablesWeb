@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Stagger, StaggerItem } from "@/components/motion/stagger";
 import { Badge } from "@/components/ui/badge";
@@ -25,6 +26,8 @@ const stats = [
 ];
 
 export function Hero() {
+  const router = useRouter();
+
   return (
     <section className="relative min-h-svh overflow-hidden">
       <motion.div
@@ -54,8 +57,7 @@ export function Hero() {
             className="mb-8"
           >
             <Badge dot>
-              UK CO. NO. — REGISTERED IN ENGLAND — OPERATING ACROSS THE UK —
-              INDIA CORRIDOR
+              OPERATING ACROSS THE UK — INDIA CORRIDOR
             </Badge>
           </motion.div>
 
@@ -92,11 +94,14 @@ export function Hero() {
             transition={{ delay: 0.65, duration: 0.6, ease: easeOut }}
             className="flex flex-wrap gap-4"
           >
-            <Button className="bg-primary text-white" onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}>
+            <Button
+              className="bg-primary text-white"
+              onClick={() => router.push("/services")}
+            >
               Explore our practice{" "}
               <span className="material-symbols-outlined">arrow_forward</span>
             </Button>
-            <Button variant="outline">Speak with us</Button>
+            <Button variant="outline" onClick={() => router.push("/contact")}>Speak with us</Button>
           </motion.div>
         </div>
       </div>

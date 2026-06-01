@@ -5,6 +5,7 @@ import Link from "next/link";
 import {
   CONTACT_CHANNELS,
   CONTACT_EMAIL,
+  CONTACT_INDIA_OFFICE,
   CONTACT_OFFICE,
 } from "./contact-data";
 
@@ -54,6 +55,22 @@ export function ContactChannels() {
         </p>
         <ul className="mt-2 space-y-1">
           {CONTACT_OFFICE.lines.map((line) => (
+            <li key={line} className="text-sm text-on-surface-variant">
+              {line}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="mt-10 border-t border-outline-variant/20 pt-8">
+        <p className="font-mono text-[10px] tracking-[0.18em] text-outline uppercase">
+          Office
+        </p>
+        <p className="mt-3 font-headline-sm text-base font-semibold text-primary">
+          {CONTACT_INDIA_OFFICE.heading}
+        </p>
+        <ul className="mt-2 space-y-1">
+          {CONTACT_INDIA_OFFICE.lines.map((line) => (
             <li key={line} className="text-sm text-on-surface-variant">
               {line}
             </li>
