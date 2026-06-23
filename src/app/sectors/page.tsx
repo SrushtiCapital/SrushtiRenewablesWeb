@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Sectors | Srushti Renewables",
   description:
-    "Capital-intensive, regulated infrastructure and energy sectors across the UK–India corridor — renewables, real estate, ports, and agriculture.",
+    "Capital-intensive, regulated infrastructure and energy sectors across the UK–India-Africa corridor — renewables, real estate, ports, and agriculture.",
 };
 
 export default function SectorsPage() {

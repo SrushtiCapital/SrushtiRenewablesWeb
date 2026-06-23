@@ -10,7 +10,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About | Srushti Renewables",
   description:
-    "A specialist cross-border capital advisory firm focused on the UK–India corridor — enabling 5 GW of clean energy infrastructure by 2030.",
+    "A specialist cross-border capital advisory firm focused on the UK–India-Africa corridor — enabling 5 GW of clean energy infrastructure by 2030.",
 };
 
 export default function AboutPage() {

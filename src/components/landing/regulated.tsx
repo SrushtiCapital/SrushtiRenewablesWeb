@@ -22,7 +22,7 @@ const frameworks: RegulatoryFramework[] = [
       { name: "Sustainable Finance Disclosure", code: "SFDR" },
     ],
     footnote:
-      "Appointed Representative pathway in progress. Regulated activities conducted via appropriately authorised firms where required.",
+      "FCA Appointed Representative (FRN 1058136) of Langham Hall Fund Management LLP (FRN: 746018) who is Authorised and Regulated by the Financial Conduct Authority.",
   },
   {
     region: "India",

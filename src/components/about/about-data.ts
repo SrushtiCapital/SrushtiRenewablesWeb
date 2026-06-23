@@ -13,7 +13,7 @@ export const ABOUT_PRINCIPLES: AboutPrinciple[] = [
     number: "01",
     title: "One corridor.",
     description:
-      "Single focus on the UK–India corridor — London-facing mandate origination with Mumbai execution. No generalist coverage, no diluted attention.",
+      "Corodinated focus on the UK–India-Africa corridor — London-facing mandate origination with emerging and developing markets execution. No generalist coverage, no diluted attention.",
     icon: "public",
   },
   {

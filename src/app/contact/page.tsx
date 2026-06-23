@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact | Srushti Renewables",
   description:
-    "Reach Srushti Renewables for sponsor enquiries, institutional introductions, and cross-border capital advisory on the UK–India corridor.",
+    "Reach Srushti Renewables for sponsor enquiries, institutional introductions, and cross-border capital advisory on the UK–India–Africa corridor.",
 };
 
 export default function ContactPage() {

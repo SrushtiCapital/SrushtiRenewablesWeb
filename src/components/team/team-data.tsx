@@ -38,7 +38,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
         linkedin: "https://www.linkedin.com/in/sunil-patil-18bb081a/",
         bio: [
           "Sunil Patil is the founder and CEO of Srushti Renewables, bringing over 25 years of experience across investment banking, infrastructure finance, ESG advisory, and enterprise technology transformation. He advises renewable energy and infrastructure sponsors on accessing institutional capital, development finance institutions, and cross-border funding opportunities across Europe and emerging markets.",
-          "Previously, Sunil spent more than 15 years at Barclays Investment Bank, where he supported large-scale platforms across fixed income markets, structured finance, collateral management, and risk systems. His experience spans climate finance, debt structuring, investor engagement, and infrastructure advisory — positioning him to strengthen global partnerships, institutional outreach, and climate-finance ecosystem development across the UK ↔ India corridor.",
+          "Previously, Sunil spent more than 15 years at Barclays Investment Bank, where he supported large-scale platforms across fixed income markets, structured finance, collateral management, and risk systems. He is approved by the FCA (SXP02585) and his experience spans climate finance, debt structuring, investor engagement, and infrastructure advisory — positioning him to strengthen global partnerships, institutional outreach, and climate-finance ecosystem development across the UK ↔ India ↔ Africa  corridor.",
         ],
       },
       {
@@ -105,7 +105,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
         name: "Amit Malikar",
         role: "Business Development",
         image: "/team/amit.jpg",
-        bio: "New business initiation and development; post-initiation follow-up across the India mandate pipeline.",
+        bio: "New business initiation and development; post-initiation follow-up across the India/Africa mandate pipeline.",
       },
     ],
   },

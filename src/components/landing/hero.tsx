@@ -57,7 +57,7 @@ export function Hero() {
             className="mb-8"
           >
             <Badge dot>
-              OPERATING ACROSS THE UK — INDIA CORRIDOR
+              OPERATING ACROSS THE UK — INDIA - AFRICA CORRIDOR
             </Badge>
           </motion.div>
 
@@ -70,7 +70,7 @@ export function Hero() {
             Institutional capital, <br />
             built for the{" "}
             <span className="serif-italic gold-highlight">
-              India infrastructure
+              India/Africa infrastructure
             </span>{" "}
             decade.
           </motion.h1>

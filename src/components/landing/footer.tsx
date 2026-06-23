@@ -7,7 +7,7 @@ import { FadeIn } from "@/components/motion/fade-in";
 import { Button } from "@/components/ui/button";
 import { fadeUp } from "@/lib/motion";
 import Image from "next/image";
-import { CONTACT_OFFICE } from "../contact/contact-data";
+import { SRL_OFFICES } from "../contact/contact-data";
   
 const practiceLinks = [
   { label: "Services", href: "/services" },
@@ -44,15 +44,11 @@ export function Footer() {
         >
          <Image src="/logo.png" alt="Srushti Renewables" width={100} height={100} />
           <p className="mb-6 font-body-sm text-body-sm text-on-surface-variant">
-            {CONTACT_OFFICE.heading}
+            {SRL_OFFICES.heading}
           </p>
-          <ul className="mt-2 space-y-1">
-          {CONTACT_OFFICE.lines.map((line) => (
-            <li key={line} className="text-sm text-on-surface-variant">
-              {line}
-            </li>
-          ))}
-        </ul>
+           <p className="mb-6 font-body-sm text-body-sm text-on-surface-variant">
+            {SRL_OFFICES.principal}
+          </p>
         </motion.div>
 
         {[
@@ -99,6 +95,8 @@ export function Footer() {
             London, United Kingdom
             <br />
             Mumbai, India
+            <br />
+            GIFT IFSC, India (In Progress)
           </p>
           <Button
             size="sm"

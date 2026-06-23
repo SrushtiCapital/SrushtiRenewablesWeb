@@ -26,7 +26,15 @@ export const CONTACT_CHANNELS: ContactChannel[] = [
     subjectTag: "Institutional enquiry",
   },
 ];
-
+export const SRL_OFFICES = {
+  heading: "Srushti Renewables Ltd. UK Company number 14760527, Financial Conduct Authority: FRN 1058136",
+  principal: "Appointed Representative of Langham Hall Fund Management LLP (FRN: 746018) who is Authorised and Regulated by the Financial Conduct Authority.",
+  operations: [
+    "London, UK & Europe",
+    "Mumbai, India",
+    "GIFT City - IFSC, India",
+  ],
+};
 export const CONTACT_OFFICE = {
   heading: "United Kingdom",
   lines: [

@@ -32,7 +32,7 @@ export const MODERN_SLAVERY_SECTIONS: LegalSection[] = [
     tier: "/ 02",
     title: "Our organisation",
     paragraphs: [
-      "Srushti Renewables Ltd is a UK-registered cross-border capital advisory firm operating across the UK ↔ India corridor. We provide structuring and capital-raising advisory services to sponsors of infrastructure, energy, and real estate transactions, and engage with institutional lenders, development finance institutions, export credit agencies, and sustainable-finance investors in connection with those transactions.",
+      "Srushti Renewables Ltd is a UK-registered cross-border capital advisory firm operating across the UK ↔ India ↔ Africa corridor. We provide structuring and capital-raising advisory services to sponsors of infrastructure, energy, and real estate transactions, and engage with institutional lenders, development finance institutions, export credit agencies, and sustainable-finance investors in connection with those transactions.",
       "We operate with a senior, specialist team across the UK and India. We do not employ low-skilled or seasonal labour, and we do not operate manufacturing, agricultural, or extractive facilities directly. Our principal exposure to modern-slavery risk arises through our suppliers, sub-contractors, and the underlying assets in mandates we advise on — addressed below.",
     ],
   },
