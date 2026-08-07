@@ -22,7 +22,7 @@ const frameworks: RegulatoryFramework[] = [
       { name: "Sustainable Finance Disclosure", code: "SFDR" },
     ],
     footnote:
-      "FCA Appointed Representative (FRN 1058136) of Langham Hall Fund Management LLP (FRN: 746018) who is Authorised and Regulated by the Financial Conduct Authority.",
+      "Srushti Renewables Ltd is an Appointed Representative of Langham Hall Fund Management LLP, which is authorised and regulated by the Financial Conduct Authority.",
   },
   {
     region: "India",
