@@ -8,6 +8,7 @@ type TeamMemberPhotoProps = {
   image?: string;
   className?: string;
   initialsClassName?: string;
+  sizes?: string;
 };
 
 function initials(name: string) {
@@ -24,6 +25,7 @@ export function TeamMemberPhoto({
   image,
   className,
   initialsClassName = "text-4xl",
+  sizes,
 }: TeamMemberPhotoProps) {
   const [failed, setFailed] = useState(false);
 
@@ -51,6 +53,7 @@ export function TeamMemberPhoto({
     <img
       src={image}
       alt={name}
+      sizes={sizes}
       className={cn("absolute inset-0 h-full w-full object-cover object-top", className)}
       onError={() => setFailed(true)}
     />
