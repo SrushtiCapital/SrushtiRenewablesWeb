@@ -125,7 +125,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
       </>
     ),
     description:
-      "Domain depth across biofuels, biogas, catalysis, and EPC delivery — the technical anchor for every renewable-energy mandate.",
+      "Domain depth across renewable energy, sustainable agriculture, biofuels, biogas, catalysis, and EPC delivery — the technical anchor for every renewable-energy mandate.",
     layout: "grid",
     members: [
       {
@@ -135,17 +135,11 @@ export const TEAM_GROUPS: TeamGroup[] = [
         bio: "PhD and research experience in catalysis and synthesis, organic synthesis, biomass conversion, biofuels, and chemical analysis.",
       },
       {
-        name: "Gajanan Patil",
-        role: "EPC Consultant",
-        image: "/team/gajanan.jpg",
-        bio: "Founder of Urja BioSystems and technology consultant for industry-scale compressed biogas sites.",
-      },
-      {
-        name: "Bhadresh Patel",
-        role: "Consultant",
-        image: "/team/bhadresh.jpg",
-        bio: "Founder and technology consultant for industry-scale compressed biogas sites.",
-      },
+        name: "Dr. S. Prasad",
+        role: "Principal Consultant",
+        image: "/team/DrSPrasad.jpeg",
+        bio: "Ph.D. in Life Science. More than 25 years of experience in Development of Green Technology and Sustainable agriculture. Founder of Care Pro Bioscience Pvt. Ltd well-established R&D lab recognized by DSIR and a production facility equipped with fermentation units capable of producing high-quality microbial-based products, On August 26, 2022, CPB signed a Joint Implementation and Operation Agreement for Innovative Climate Resilient and Carbon Neutral Food Production Projects with the Agri Export Startup Programme under a Joint Venture with the National Research Development Corporation (NRDC), an Enterprise of the (DSIR), Ministry of Science and Technology, Government of India and World Intellectual Property Organization (WIPO Green), on the basis of CPB patented technologies for climate-resilient farming",
+      },      
     ],
   },
 ];
