@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -8,7 +7,6 @@ type TeamMemberPhotoProps = {
   name: string;
   image?: string;
   className?: string;
-  sizes?: string;
   initialsClassName?: string;
 };
 
@@ -25,7 +23,6 @@ export function TeamMemberPhoto({
   name,
   image,
   className,
-  sizes = "280px",
   initialsClassName = "text-4xl",
 }: TeamMemberPhotoProps) {
   const [failed, setFailed] = useState(false);
@@ -51,12 +48,10 @@ export function TeamMemberPhoto({
   }
 
   return (
-    <Image
+    <img
       src={image}
       alt={name}
-      fill
-      className={cn("object-cover object-top", className)}
-      sizes={sizes}
+      className={cn("absolute inset-0 h-full w-full object-cover object-top", className)}
       onError={() => setFailed(true)}
     />
   );
