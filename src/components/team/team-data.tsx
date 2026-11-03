@@ -99,7 +99,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
       {
         name: "Kiran Kumar",
         role: "Business Development · Director",
-        image: "/team/kiran.jpg",
+        image: "/team/kiran.jpeg",
         bio: "15+ years in corporate fund raising, team building, and complex financial transactions in the infrastructure sector — from financial modelling and concession analysis through bid advisory, debt arrangement, execution-stage compliance, and post-completion monetisation.",
       },
       {
